@@ -25,4 +25,24 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * 测试1
+     * @param Request $request
+     * @return string
+     */
+    public function test(Request $request)
+    {
+        return view('test');#在你的视图文件夹创建test.blade.php
+    }
+
+    /**
+     * 测试2
+     * @param Request $request
+     * @return string
+     */
+    public function test2(Request $request)
+    {
+        return 'Hello World2:' . $request->get('name');
+    }
 }
