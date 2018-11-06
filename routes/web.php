@@ -21,6 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/test1', 'HomeController@test');
 Route::get('/test2', 'HomeController@test2');
 
-Route::get('/bookcar', function () {
-    dump(\App\Models\Book\Category::all());
+Route::get('/category', function () {
+    dump(\App\Models\Book\Category::all()->toArray());
 });
