@@ -13,7 +13,7 @@ use SwooleTW\Http\Websocket\Facades\Websocket;
 */
 
 Websocket::on('connect', function ($websocket, Request $request) {
-    // called while socket on connect
+    $websocket->emit('message', $request->toArray());
 });
 
 Websocket::on('disconnect', function ($websocket) {
