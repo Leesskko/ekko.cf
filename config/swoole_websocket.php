@@ -7,7 +7,7 @@ return [
     | Replace this handler if you want to customize your websocket handler
     |--------------------------------------------------------------------------
     */
-    'handler' => SwooleTW\Http\Websocket\SocketIO\WebsocketHandler::class,
+    'handler' => App\Http\Websocket\WebsocketHandler::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -30,9 +30,9 @@ return [
     |--------------------------------------------------------------------------
     */
     'middleware' => [
-        // SwooleTW\Http\Websocket\Middleware\DecryptCookies::class,
-        // SwooleTW\Http\Websocket\Middleware\StartSession::class,
-        // SwooleTW\Http\Websocket\Middleware\Authenticate::class,
+        SwooleTW\Http\Websocket\Middleware\DecryptCookies::class,
+        SwooleTW\Http\Websocket\Middleware\StartSession::class,
+        SwooleTW\Http\Websocket\Middleware\Authenticate::class,
     ],
 
     /*

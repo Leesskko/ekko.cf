@@ -15,7 +15,6 @@ $http->on('WorkerStart', function ($serv, $worker_id) {
 
 //监听http请求
 $http->on('request', function ($request, $response) {
-
     //server信息
     if (isset($request->server)) {
         foreach ($request->server as $k => $v) {
