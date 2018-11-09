@@ -25,7 +25,7 @@ class WebsocketHandler implements HandlerContract
      */
     public function onOpen($fd, Request $request)
     {
-        App::make('swoole.server')->push($fd, $request->user());
+        App::make('swoole.server')->push($fd, '123456');
         return true;
     }
 
